@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href={{url_for('static', filename='index.css')}}/>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <div id="lat_disp" class="bg-white"></div>
+        <div id="menu_bar" class="bg-slate-200 flex flex-row items-center">
+            <div id="info_button" class="bg-slate-200 flex flex-1 min-h-full items-center text-center">
+                <div class="min-w-full">ℹ About</div>
+            </div>
+            <div id="hazard_report" class="bg-slate-200 flex flex-1 min-h-full items-center text-center">
+                <div class="min-w-full">⚠ Report Hazard</div>
+            </div>
+        </div>
+        <div id="help_button" class="bg-white rounded-full flex items-center text-center" onclick="toggleQuestionnaire()">
+            <div class="min-w-full">HELP</div>
+        </div>
+        <div id="notif_bar" style="transform: translateY(-100%)" class="bg-white rounded-md">
+            Heheheha
+        </div>
+        <div id="profile">
+        </div>
+        <div id="questionnaire" class="box" style="height: 0; opacity: 0;" class="bg-white flex flex-col" onclick="">
+        </div>
+        <script src={{ url_for('static', filename='index.js') }}> </script>
+    </body>
+</html>
