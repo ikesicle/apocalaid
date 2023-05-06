@@ -1,5 +1,7 @@
 from flask import *
 import json
+from waitress import serve
+import os
 
 app = Flask(__name__)
 
@@ -48,3 +50,7 @@ def doctor():
 def data():
     jason = json.load(open("jason.json"))
     return jason
+
+
+if __name__ == "__main__":
+    serve(app, port=int(os.environ.get("PORT", 8080)))
